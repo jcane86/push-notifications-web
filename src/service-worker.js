@@ -127,10 +127,30 @@ self.addEventListener('push', e => {
     const title = payloadFromCallback.notification.title || '';
     const body = payloadFromCallback.notification.body || '';
     const icon = payloadFromCallback.notification.icon;
+    const badge = payloadFromCallback.notification.badge;
+    const image = payloadFromCallback.notification.image;
+    const dir = payloadFromCallback.notification.dir;
+    const lang = payloadFromCallback.notification.lang;
+    const renotify = payloadFromCallback.notification.renotify;
+    const requireInteraction = payloadFromCallback.notification.requireInteraction;
+    const silent = payloadFromCallback.notification.silent;
+    const tag = payloadFromCallback.notification.tag;
+    const timestamp = payloadFromCallback.notification.timestamp;
+    const vibrate = payloadFromCallback.notification.vibrate;
 
     const options = {
       body,
       icon,
+      badge,
+      image,
+      dir,
+      lanf,
+      renotify,
+      requireInteraction,
+      silent,
+      tag,
+      timestamp,
+      vibrate,
       data: {
         pusher: {
           customerPayload: payloadFromCallback,
